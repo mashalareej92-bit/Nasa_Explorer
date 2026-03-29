@@ -1,0 +1,38 @@
+body {
+    background: radial-gradient(circle, #1b2735 0%, #090a0f 100%);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05); /* Glass-morphism */
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.search-box input {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin-right: 10px;
+}
+
+#space-pic {
+    width: 100%;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+#description {
+    line-height: 1.6;
+    font-size: 0.9rem;
+    color: #ccc;
+}
