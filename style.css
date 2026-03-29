@@ -1,38 +1,55 @@
 body {
-    background: radial-gradient(circle, #1b2735 0%, #090a0f 100%);
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
+    background-color: #0b0f1a; /* very dark blue */
+    color: #ffffff; /* white text */
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
     padding: 20px;
 }
-
-.container {
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #00bfff; /* bright blue like a star */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+.content-box {
+    background: rgba(255, 255, 255, 0.1); /* semi-transparent white */
+    backdrop-filter: blur(10px); /* blur for glass effect */
+    border-radius: 15px;
+    padding: 20px;
     max-width: 800px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.05); /* Glass-morphism */
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 20px auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+#space-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
 }
 
-.search-box input {
-    padding: 10px;
+#space-img:hover {
+    transform: scale(1.05); /* zoom effect on hover */
+}
+#date-input {
+    padding: 10px 15px;
+    font-size: 1em;
     border-radius: 8px;
     border: none;
-    margin-right: 10px;
+    margin-bottom: 20px;
+    outline: none;
+    cursor: pointer;
+    background-color: #1a1f2b;
+    color: #ffffff;
+}
+#date-input:hover {
+    background-color: #2a2f44;
+}
+#space-img, #title, #description {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
 }
 
-#space-pic {
-    width: 100%;
-    border-radius: 15px;
-    margin: 20px 0;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-#description {
-    line-height: 1.6;
-    font-size: 0.9rem;
-    color: #ccc;
+.show {
+    opacity: 1;
 }
