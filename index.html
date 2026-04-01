@@ -2,32 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>NASA Universe Explorer</title>
 </head>
 <body>
 
-    <!-- Main heading -->
     <h1>NASA Universe Explorer</h1>
 
-    <!-- Date input -->
-    <input type="date" id="date-input">
-
-    <!-- Space image will appear here -->
-    <div class="content-box">
-        <img id="space-img" src="" alt="NASA Image of the Day">
-        <h2 id="title"></h2>
-        <p id="description"></p>
+    <div class="controls">
+        <input type="date" id="date-input">
+        <button id="search-btn">Explore the Universe</button>
     </div>
 
-    <!-- Image title -->
-    <h2 id="title"></h2>
+    <div class="content-box">
+        <div class="flex-wrapper">
+            <div class="image-side">
+                <img id="space-img" src="" alt="NASA Image of the Day">
+            </div>
+            
+            <div class="text-side">
+                <h2 id="title">Loading...</h2>
+                <div class="scroll-description">
+                    <p id="description">Fetching the wonders of the cosmos...</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Image description -->
-    <p id="description"></p>
-
-    <!-- Connecting JavaScript -->
     <script src="script.js"></script>
-
 </body>
 </html>

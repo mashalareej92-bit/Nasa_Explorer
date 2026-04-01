@@ -1,7 +1,7 @@
 body {
     background-color: #0b0f1a; /* very dark blue */
     color: #ffffff; /* white text */
-    font-family: 'Orbitron', sans-serif;
+    font-family:'Courier New', Courier, monospace;
     text-align: center;
     padding: 20px;
 }
@@ -10,22 +10,6 @@ h1 {
     margin-bottom: 20px;
     color: #00bfff; /* bright blue like a star */
     text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-}
-.content-box {
-    background: rgba(255, 255, 255, 0.1); /* semi-transparent white */
-    backdrop-filter: blur(10px); /* blur for glass effect */
-    border-radius: 15px;
-    padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-}
-#space-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
 }
 
 #space-img:hover {
@@ -45,11 +29,87 @@ h1 {
 #date-input:hover {
     background-color: #2a2f44;
 }
-#space-img, #title, #description {
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
+.content-box {
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    
+    /* Lock the box to the screen size */
+    width: 95%;
+    max-width: 1000px; 
+    max-height: 85vh; /* 85% of the screen height */
+    margin: 20px auto;
+    overflow: hidden; 
 }
 
-.show {
-    opacity: 1;
+.flex-wrapper {
+    display: flex;
+    gap: 25px; /* Space between image and text */
+    height: 100%;
+    align-items: flex-start;
+}
+
+.image-side {
+    flex: 1.2; /* Image takes slightly more space */
+}
+
+#space-img {
+    width: 100%;
+    max-height: 75vh; /* Keeps image from pushing the box down */
+    object-fit: contain; /* Shows full image without cropping */
+    border-radius: 12px;
+}
+
+.text-side {
+    flex: 1;
+    text-align: left; /* Better for reading long descriptions */
+    display: flex;
+    flex-direction: column;
+    max-height: 75vh;
+}
+
+/* Internal scrollbar just for the description text */
+.scroll-description {
+    overflow-y: auto; 
+    padding-right: 10px;
+}
+
+/* Optional: Make the scrollbar look aesthetic */
+.scroll-description::-webkit-scrollbar {
+    width: 5px;
+}
+.scroll-description::-webkit-scrollbar-thumb {
+    background: #00bfff;
+    border-radius: 10px;
+}
+
+
+
+#title {
+    font-size: 1.2rem; /* Smaller text for a smaller box */
+    margin: 10px 0;
+}
+
+#description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: justify; /* Looks cleaner in small containers */
+}
+
+#search-btn {
+    background-color: #00bfff; /* Star Blue */
+    color: #0b0f1a;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#search-btn:hover {
+    background-color: #ffffff;
+    box-shadow: 0 0 15px #00bfff;
 }
